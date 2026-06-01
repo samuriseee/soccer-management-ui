@@ -1,0 +1,129 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.filter_row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.filter_input {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.filter_select {
+    width: 180px;
+    height: 40px;
+
+    :global {
+        .ant-select-selector {
+            border-radius: 4px;
+        }
+    }
+}
+
+.filter_datepicker {
+    width: 160px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    color: var(--text-color-primary);
+}
+
+.table_container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+
+    th,
+    td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    th {
+        background: #f5f5f5;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+}
+
+.status_badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.status_confirmed {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status_cancelled {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.status_done {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status_problem {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.pagination_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+
+    :global {
+        .ant-pagination {
+            display: flex;
+            gap: 4px;
+        }
+    }
+}
+
+.no_data {
+    text-align: center !important;
+    color: var(--text-color-secondary) !important;
+    padding: 24px !important;
+}

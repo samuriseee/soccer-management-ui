@@ -1,0 +1,75 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.review_item {
+    display: flex;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color-light);
+
+    .review_content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .review_header {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .reviewer_name {
+                font-size: var(--font-size-normal);
+                font-weight: var(--font-weight-medium);
+                line-height: 20px;
+                color: var(--text-color-primary);
+            }
+
+            .review_rating {
+                display: flex;
+
+                .star_icon {
+                    margin-right: 2px;
+                }
+            }
+        }
+
+        .review_comment {
+            font-size: var(--font-size-normal);
+            color: var(--text-color-primary);
+            line-height: 20px;
+        }
+
+        .review_footer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .review_date {
+                font-size: var(--font-size-small);
+                color: var(--text-color-secondary);
+                font-weight: 400;
+                line-height: 18px;
+            }
+
+            .reply_button {
+                font-size: var(--font-size-small);
+                color: var(--color-primary);
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

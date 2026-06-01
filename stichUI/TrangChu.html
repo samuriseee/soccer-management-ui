@@ -1,0 +1,589 @@
+<html class="light" lang="vi">
+  <head></head>
+  <body class="bg-background text-on-surface">
+    ```html
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sportsync - Sân bóng Đà Nẵng</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#005c64",
+              "surface-container-high": "#e0e3e1",
+              "tertiary-fixed": "#11eaff",
+              surface: "#f5f7f5",
+              primary: "#006b0a",
+              "secondary-fixed": "#9df197",
+              "surface-container-highest": "#d9dedb",
+              "primary-fixed": "#59ee50",
+              secondary: "#176a21",
+              background: "#f5f7f5",
+              "on-tertiary-fixed": "#003d43",
+              "primary-container": "#59ee50",
+              "on-secondary": "#d1ffc8",
+              "on-primary": "#d2ffc4",
+              "primary-dim": "#005d07",
+              "surface-bright": "#f5f7f5",
+              "on-primary-fixed-variant": "#005f07",
+              "on-surface": "#2c2f2e",
+              "on-error-container": "#520c00",
+              "surface-tint": "#006b0a",
+              "inverse-primary": "#59ee50",
+              "error-dim": "#b92902",
+              "primary-fixed-dim": "#49e043",
+              "on-secondary-fixed-variant": "#12661e",
+              "tertiary-container": "#11eaff",
+              "on-primary-container": "#005406",
+              "surface-dim": "#d1d5d3",
+              "surface-container": "#e6e9e7",
+              "secondary-container": "#9df197",
+              "on-tertiary": "#d4f9ff",
+              "on-tertiary-container": "#005159",
+              "tertiary-fixed-dim": "#00dbee",
+              "secondary-fixed-dim": "#90e28a",
+              "on-secondary-container": "#005c15",
+              "tertiary-dim": "#005861",
+              "surface-container-low": "#eff1ef",
+              "inverse-surface": "#0b0f0e",
+              outline: "#747776",
+              "surface-variant": "#d9dedb",
+              "on-surface-variant": "#595c5b",
+              "error-container": "#f95630",
+              "on-background": "#2c2f2e",
+              "on-secondary-fixed": "#00460e",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#9b9d9c",
+              error: "#b02500",
+              "secondary-dim": "#025d16",
+              "on-error": "#ffefec",
+              "on-primary-fixed": "#003e03",
+              tertiary: "#00656f",
+              "outline-variant": "#abaeac",
+            },
+            fontFamily: {
+              headline: ["Be Vietnam Pro"],
+              body: ["Be Vietnam Pro"],
+              label: ["Be Vietnam Pro"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .pitch-card-shadow {
+        box-shadow: 0 12px 32px rgba(0, 107, 10, 0.06);
+      }
+      .glass-nav {
+        backdrop-filter: blur(12px);
+      }
+    </style>
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-[#f5f7f5]/80 backdrop-blur-md glass-nav"
+    >
+      <div
+        class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto"
+      >
+        <div class="flex items-center gap-8">
+          <a
+            class="text-2xl font-black text-[#006b0a] tracking-tighter"
+            href="#"
+            >Sportsync</a
+          >
+          <nav
+            class="hidden md:flex items-center space-y-0 space-x-8 font-['Be_Vietnam_Pro'] text-body-lg"
+          >
+            <a
+              class="text-[#006b0a] font-bold border-b-2 border-[#006b0a] pb-1 hover:text-[#006b0a] transition-colors duration-200"
+              href="#"
+              >Sân bóng</a
+            >
+            <a
+              class="text-[#2c2f2e] hover:text-[#006b0a] transition-colors duration-200"
+              href="#"
+              >Giới thiệu</a
+            >
+            <a
+              class="text-[#2c2f2e] hover:text-[#006b0a] transition-colors duration-200"
+              href="#"
+              >Hỗ trợ</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="p-2 text-[#006b0a] hover:bg-surface-container-high rounded-full transition-all"
+          >
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button
+            class="p-2 text-[#006b0a] hover:bg-surface-container-high rounded-full transition-all"
+          >
+            <span class="material-symbols-outlined"
+              >account_balance_wallet</span
+            ></button
+          ><button
+            class="p-2 text-[#006b0a] hover:bg-surface-container-high rounded-full transition-all"
+          >
+            <span class="material-symbols-outlined">notifications</span></button
+          ><button
+            class="p-2 text-[#006b0a] hover:bg-surface-container-high rounded-full transition-all flex items-center gap-1 group"
+            title="Đăng xuất"
+          >
+            <span class="material-symbols-outlined">logout</span>
+            <span class="hidden lg:inline text-sm font-bold">Đăng xuất</span>
+          </button>
+          <div
+            class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-container"
+          >
+            <img
+              alt="User profile avatar"
+              data-alt="close-up portrait of a smiling young professional man with short dark hair in a brightly lit modern office environment"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFYvu3YkGRILOfHKSIL31CdLUfaV5_AOdepazk2av9wP43JZyEPhmsxL3lgmfwIxheZjI-jy76ba81UAj8QR4f3CFeZrjlTkGb9O31WKjLkE_sKP12mK86vEUhXjihUJVpPsM9Q-cknSmB_5i9TDzagnBLDa0GxE13wyHp5fcDiF5RHyqONK9z2gTwtdOzFkH1rxsxaubgA761ncaaGAnEHM2lKdKkG30Np8tW98IQLGiu0VIVLGw-tFE4ZpAuqQOnEsjtC24N_tM"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-24 pb-20">
+      <!-- Hero Section -->
+      <section class="px-8 max-w-7xl mx-auto mb-16">
+        <div
+          class="relative rounded-[2.5rem] overflow-hidden min-h-[500px] flex items-center p-12 bg-primary"
+        >
+          <div class="absolute inset-0 z-0">
+            <img
+              alt="Football pitch background"
+              class="w-full h-full object-cover opacity-40"
+              data-alt="dramatic wide shot of a professional football stadium at night under bright floodlights with a lush green pitch and empty stands"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8Do4WC5Aj3XFyQzcwydBJk5XpkmVnFF6cAZQe4bnQ__ddctJ1v62-75Bqn6gXECn97wB_gqTjVj9XMoC3P8Bz-wwS9vuCF0-VvrhLEWnA2EDVWqSB3LHwHdJPvmEdAKLu5Q_4v0-aNA-aju4Vh-NTHsm_0WKIy55aiUEtXRJfUdLrytAiOJJTlVHWP0JN9yFSgDW6QmXK0C2cjTftsEORkOhzfVp5kdaekv4AmqTRn0CcxC9Q5MRuvZUM6Woq5uA68AGzPS55_s"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"
+            ></div>
+          </div>
+          <div class="relative z-10 max-w-2xl">
+            <h1
+              class="text-white text-[3.5rem] font-black leading-[1.1] tracking-tight mb-6"
+            >
+              Tìm Sân Bóng <br /><span class="text-primary-container"
+                >Đà Nẵng Của Bạn</span
+              >
+            </h1>
+            <!-- Search Bar Bento-style -->
+            <div
+              class="bg-surface-container-lowest p-2 rounded-full shadow-2xl flex flex-col md:flex-row items-center gap-2 max-w-3xl"
+            >
+              <div
+                class="flex-1 flex items-center px-6 py-2 border-r border-outline-variant/15 w-full"
+              >
+                <span class="material-symbols-outlined text-outline mr-3"
+                  >stadium</span
+                >
+                <div class="flex flex-col">
+                  <label
+                    class="text-[0.65rem] uppercase font-bold tracking-wider text-outline"
+                    >Tên sân</label
+                  >
+                  <input
+                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface placeholder:text-outline-variant w-full"
+                    placeholder="Bạn muốn đá ở đâu?"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex-1 flex items-center px-6 py-2 border-r border-outline-variant/15 w-full"
+              >
+                <span class="material-symbols-outlined text-outline mr-3"
+                  >location_on</span
+                >
+                <div class="flex flex-col">
+                  <label
+                    class="text-[0.65rem] uppercase font-bold tracking-wider text-outline"
+                    >Quận/Huyện</label
+                  >
+                  <select
+                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface w-full appearance-none"
+                  >
+                    <option>Hải Châu</option>
+                    <option>Thanh Khê</option>
+                    <option>Sơn Trà</option>
+                    <option>Ngũ Hành Sơn</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1 flex items-center px-6 py-2 w-full">
+                <span class="material-symbols-outlined text-outline mr-3"
+                  >map</span
+                >
+                <div class="flex flex-col">
+                  <label
+                    class="text-[0.65rem] uppercase font-bold tracking-wider text-outline"
+                    >Phường/Xã</label
+                  >
+                  <select
+                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface w-full appearance-none"
+                  >
+                    <option>Phước Ninh</option>
+                    <option>Thạch Thang</option>
+                    <option>Hòa Cường Bắc</option>
+                  </select>
+                </div>
+              </div>
+              <button
+                class="bg-primary-container text-on-primary-container h-14 w-14 md:h-14 md:w-24 rounded-full flex items-center justify-center hover:scale-105 active:scale-95 transition-transform"
+              >
+                <span class="material-symbols-outlined">search</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Pitches Section -->
+      <section class="px-8 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-10">
+          <div>
+            <span
+              class="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-2 block"
+              >Dành cho bạn</span
+            >
+            <h2 class="text-4xl font-black tracking-tight text-on-surface">
+              Sân Bóng Nổi Bật
+            </h2>
+          </div>
+          <a
+            class="text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform"
+            href="#"
+          >
+            Xem tất cả
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+        <!-- Bento-ish Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Large Featured Card -->
+          <div class="md:col-span-8 group cursor-pointer">
+            <div
+              class="bg-surface-container-lowest rounded-[2rem] overflow-hidden pitch-card-shadow transition-all duration-300 hover:-translate-y-2"
+            >
+              <div class="relative h-[400px]">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  data-alt="high angle view of a pristine urban rooftop football field with artificial turf and bright white markings at dusk"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp831p_5p4ULMVHpZNdaWYa5iwaFOP-vqyIpVH-eouAsRZiSeckJ6Rae8BPQk_8OAbIJ9gDmwMOTF-ZHDteJyflkWdnMKjOpJVeCv2s-sPLaXk1U5wLyyfJO7ievcbfrsuYI7g-aep6vrZnBr8luwGLtA7KbL7ucVgg7M3NmuFc4WFrA832wy27t_3v0qVbHGb1JsBnLTd-7VVK6CB9CorT3wnTP6O7z6zDbD0bmgCa2owbcGJcs77IooUFPQj24wrFIKDgiKAJUg"
+                />
+                <div class="absolute top-6 left-6 flex gap-2">
+                  <span
+                    class="bg-primary text-white text-[0.65rem] font-bold uppercase tracking-widest px-4 py-2 rounded-full"
+                    >Sân 7 người</span
+                  >
+                  <span
+                    class="bg-white/90 backdrop-blur-md text-primary text-[0.65rem] font-bold uppercase tracking-widest px-4 py-2 rounded-full flex items-center gap-1"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[14px]"
+                      style="font-variation-settings: &quot;FILL&quot; 1"
+                      >star</span
+                    >
+                    4.9
+                  </span>
+                </div>
+              </div>
+              <div class="p-8 flex justify-between items-start">
+                <div>
+                  <h3 class="text-3xl font-extrabold mb-2 text-on-surface">
+                    Sân bóng Tuyên Sơn
+                  </h3>
+                  <div class="flex items-center gap-4 text-outline mb-4">
+                    <span class="flex items-center gap-1 text-sm"
+                      ><span class="material-symbols-outlined text-base"
+                        >location_on</span
+                      >
+                      Hòa Cường Bắc, Hải Châu</span
+                    >
+                    <span class="flex items-center gap-1 text-sm"
+                      ><span class="material-symbols-outlined text-base"
+                        >wifi</span
+                      >
+                      Miễn phí WiFi</span
+                    >
+                  </div>
+                  <div class="flex gap-2">
+                    <span
+                      class="bg-surface-container-high px-3 py-1 rounded-sm text-[0.65rem] font-bold uppercase tracking-tight text-on-surface-variant"
+                      >Bãi đỗ xe</span
+                    >
+                    <span
+                      class="bg-surface-container-high px-3 py-1 rounded-sm text-[0.65rem] font-bold uppercase tracking-tight text-on-surface-variant"
+                      >Canteen</span
+                    >
+                    <span
+                      class="bg-surface-container-high px-3 py-1 rounded-sm text-[0.65rem] font-bold uppercase tracking-tight text-on-surface-variant"
+                      >Cho thuê áo</span
+                    >
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span class="block text-primary text-2xl font-black"
+                    >350.000đ</span
+                  >
+                  <span class="text-outline text-sm">/ trận / 90p</span>
+                  <button
+                    class="mt-4 bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all active:scale-95"
+                  >
+                    Đặt sân ngay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Secondary Column -->
+          <div class="md:col-span-4 flex flex-col gap-8">
+            <!-- Small Card 1 -->
+            <div
+              class="bg-surface-container-lowest rounded-[2rem] overflow-hidden pitch-card-shadow group cursor-pointer transition-all duration-300 hover:-translate-y-2"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  data-alt="close-up of a high-quality textured green synthetic turf football pitch surface with a sharp white sideline"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMfWwYb7zJuwezuVMN9ygYIdWlPB0cMZr3fqzyUgX-0K4oNNrMjVII8Hlr3Dzt9m8spulznNzDavQCH80e0RaiEIqC9suf5byE_TtTWWY90yhusCMW-8cuzHCDHzXTGK9cCGNWoc3tPbNyAyhggUQMSfnYefJcDcg9G8f1okKG4ODVBFpYXI53POhwGYP4T_zpjfILbDCckCaXNN2DaNVV_mYe3QAK9HTOiCfvcO3qWvMYaOU1GYQAXDtrcNgC65TTiQmYOr9z6S0"
+                />
+                <span
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-primary text-[0.65rem] font-bold px-3 py-1 rounded-full flex items-center gap-1"
+                >
+                  <span
+                    class="material-symbols-outlined text-[14px]"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  4.7
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-on-surface mb-1">
+                  Sân Chuyên Việt
+                </h3>
+                <p class="text-sm text-outline mb-4">Hải Châu, Đà Nẵng</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-bold">250.000đ</span>
+                  <span
+                    class="bg-primary-fixed/20 text-on-primary-fixed-variant text-[0.6rem] font-bold px-2 py-1 rounded uppercase tracking-tighter"
+                    >Sân 5</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Small Card 2 -->
+            <div
+              class="bg-surface-container-lowest rounded-[2rem] overflow-hidden pitch-card-shadow group cursor-pointer transition-all duration-300 hover:-translate-y-2"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  data-alt="vibrant outdoor public football park at sunset with several groups of people playing in the background under soft golden light"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS5NCKGe-j8ExuudGJQZI9tguY8adhhiGLTSPLSJWjCvPcb0BO-mR8HSRwDXA29Ci1fjuLFg9RgigOB1TAVjaLcLfAgrbu05vGuDtEQovMmqDt2jAydpCk9nRTMhJPA44B5v5jdiNrgPpSo1VfeKOlGDnveC0NCntDJala30nM_wNvNhGEkP2eFR6eSQUMK6xxvr1AvJMBRnRdCBNdz_ca40-X3alZXo0gILD3XNEnB9eQRVsbwOKSMIcVubxSWUYsIpBwgv2uaao"
+                />
+                <span
+                  class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-primary text-[0.65rem] font-bold px-3 py-1 rounded-full flex items-center gap-1"
+                >
+                  <span
+                    class="material-symbols-outlined text-[14px]"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >star</span
+                  >
+                  4.5
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-on-surface mb-1">
+                  Sân bóng BCA
+                </h3>
+                <p class="text-sm text-outline mb-4">Sơn Trà, Đà Nẵng</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-primary font-bold">300.000đ</span>
+                  <span
+                    class="bg-primary-fixed/20 text-on-primary-fixed-variant text-[0.6rem] font-bold px-2 py-1 rounded uppercase tracking-tighter"
+                    >Sân 7</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Another Wide Card for visual break -->
+          <div class="md:col-span-12">
+            <div
+              class="bg-surface-container-low rounded-[2.5rem] p-12 flex flex-col md:flex-row items-center gap-12"
+            >
+              <div class="flex-1 order-2 md:order-1">
+                <span
+                  class="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-4 block"
+                  >Tính năng mới</span
+                >
+                <h2
+                  class="text-4xl font-black tracking-tight text-on-surface mb-6"
+                >
+                  Theo dõi trận đấu trực tiếp qua Sportsync AI
+                </h2>
+                <p
+                  class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-lg"
+                >
+                  Chúng tôi cung cấp hệ thống camera AI giúp bạn ghi lại những
+                  bàn thắng đẹp nhất và xem lại thông số trận đấu ngay trên ứng
+                  dụng.
+                </p>
+                <button
+                  class="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-xl flex items-center gap-3 hover:bg-primary-dim transition-all"
+                >
+                  Khám phá ngay
+                  <span class="material-symbols-outlined">smart_toy</span>
+                </button>
+              </div>
+              <div class="flex-1 order-1 md:order-2 w-full">
+                <div
+                  class="relative rounded-3xl overflow-hidden shadow-2xl rotate-3"
+                >
+                  <img
+                    alt="Phân tích thể thao AI"
+                    class="w-full h-full object-cover"
+                    data-alt="a professional digital tablet displaying a sports analytics app with complex data visualizations and heatmaps of a football game"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMvinS21hlc6rZbiEUPFePijOisq5cgXmhX0CKFOIFjKK2zQLs61buhCX5N8fh3asM2QLGvia3ErZ_ClH2b17Hb3ywcx5NqSEKmTL7TyXzSsrWWSivwOKH5Yuq6UX06bLk0BweT4qn6AploDvI8jBIYxwVjpHCpbaPDJrMJ_8muRSU1qE3IJDOa_n9hMnq_MFsERHVsexjcw4RtcLs4I2PKzaqi6OM7YzXKjVjckLgkWizmPlvhsrh4mG4HQZ-T4jpne9iKyyaoE8"
+                  />
+                  <div
+                    class="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-3xl"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-[#e0e3e1] dark:bg-slate-950 full-width py-12 px-8 mt-auto"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl mx-auto"
+      >
+        <div class="space-y-6">
+          <a
+            class="text-2xl font-black text-[#006b0a] tracking-tighter"
+            href="#"
+            >Sportsync</a
+          >
+          <p
+            class="font-['Be_Vietnam_Pro'] text-body-sm text-[#2c2f2e] max-w-xs leading-relaxed"
+          >
+            Nền tảng kết nối đam mê bóng đá hàng đầu tại Đà Nẵng. Tìm sân, đặt
+            lịch và tận hưởng trận đấu.
+          </p>
+          <div class="flex gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary cursor-pointer hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined">social_leaderboard</span>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary cursor-pointer hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined">alternate_email</span>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h4
+            class="font-bold text-[#2c2f2e] uppercase text-xs tracking-widest"
+          >
+            Liên kết
+          </h4>
+          <div
+            class="flex flex-col gap-2 font-['Be_Vietnam_Pro'] text-body-sm text-[#2c2f2e]"
+          >
+            <a class="hover:text-[#006b0a] transition-colors" href="#"
+              >Chính sách bảo mật</a
+            >
+            <a class="hover:text-[#006b0a] transition-colors" href="#"
+              >Điều khoản sử dụng</a
+            >
+            <a class="hover:text-[#006b0a] transition-colors" href="#"
+              >Liên hệ: 09xx.xxx.xxx</a
+            >
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h4
+            class="font-bold text-[#2c2f2e] uppercase text-xs tracking-widest"
+          >
+            Bản tin
+          </h4>
+          <p class="text-sm text-on-surface-variant">
+            Đăng ký để nhận ưu đãi từ các sân bóng.
+          </p>
+          <div class="flex gap-2">
+            <input
+              class="bg-white border-none rounded-xl px-4 py-3 flex-1 focus:ring-2 focus:ring-primary"
+              placeholder="Email của bạn"
+              type="email"
+            />
+            <button class="bg-primary text-white p-3 rounded-xl">
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="font-['Be_Vietnam_Pro'] text-body-sm text-[#2c2f2e]">
+          © 2024 Sportsync Da Nang. Bảo lưu mọi quyền.
+        </p>
+        <div
+          class="flex gap-6 font-['Be_Vietnam_Pro'] text-body-sm text-[#2c2f2e]"
+        >
+          <span>Tiếng Việt</span>
+          <span>USD</span>
+        </div>
+      </div>
+    </footer>
+    <!-- FAB for mobile support -->
+    <div class="fixed bottom-8 right-8 md:hidden">
+      <button
+        class="h-16 w-16 bg-primary-container text-on-primary-container rounded-full shadow-2xl flex items-center justify-center border-4 border-white active:scale-90 transition-transform"
+      >
+        <span class="material-symbols-outlined text-3xl">add</span>
+      </button>
+    </div>
+    ```
+  </body>
+</html>

@@ -1,0 +1,80 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.gallery_container {
+    width: auto;
+    overflow: hidden;
+
+    .image_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+        width: 100%;
+
+        // Nếu chỉ có 1 ảnh, căn trái thay vì căn giữa
+        .image_wrapper:only-child {
+            justify-self: start;
+            max-width: 200px;
+        }
+
+        .image_wrapper {
+            // position: relative;
+            cursor: pointer;
+            aspect-ratio: 1 / 1;
+
+            .image_style {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                // display: block;
+            }
+        }
+
+        .overlay {
+            // position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            // height: 100%;
+            aspect-ratio: 1 / 1;
+
+            .overlay_text {
+                z-index: 1;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .hidden_image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .image_grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .image_grid {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+
+    .overlay {
+        .overlay_text {
+            font-size: 14px;
+        }
+    }
+}

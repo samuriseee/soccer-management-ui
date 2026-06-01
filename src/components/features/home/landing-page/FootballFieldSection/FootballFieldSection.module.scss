@@ -1,0 +1,112 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.football_field_section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--background-white-default);
+
+    .football_field_container {
+        padding: 80px 100px 40px;
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media screen and (max-width: 1200px) {
+            padding: 60px 80px 40px;
+        }
+
+        @media screen and (max-width: 996px) {
+            padding: 40px 60px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 20px 16px;
+            gap: 16px;
+        }
+
+        .heading_area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .heading_title {
+                font-size: var(--font-size-large);
+                font-weight: var(--font-weight-semi-bold);
+                line-height: var(--line-height-large);
+                color: var(--text-color-primary);
+                text-align: center;
+                letter-spacing: -0.01%;
+
+                @media screen and (max-width: 768px) {
+                    font-size: var(--font-size-medium-large);
+                    line-height: var(--line-height-medium-large);
+                }
+            }
+
+            .see_all {
+                font-size: var(--font-size-medium);
+                font-weight: var(--font-weight-medium);
+                line-height: var(--line-height-medium);
+                color: var(--text-color-brand);
+                text-align: center;
+
+                &:hover {
+                    color: var(--text-color-hyperlink);
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                @media screen and (max-width: 768px) {
+                    font-size: var(--font-size-medium);
+                    line-height: var(--line-height-medium);
+                }
+            }
+        }
+
+        .card_loading {
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0 !important;
+        }
+
+        .grid_fields {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+
+            @media (max-width: 1200px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                row-gap: 16px !important;
+            }
+        }
+
+        .pagination_wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 16px;
+            padding-bottom: 4px;
+        
+            :global {
+                .ant-pagination {
+                    display: flex;
+                    gap: 4px;
+                }
+            }
+        }
+    }
+}

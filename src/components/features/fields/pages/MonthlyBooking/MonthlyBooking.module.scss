@@ -1,0 +1,110 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.monthly_booking_container {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.info_box {
+  background: #e6f4ff;
+  border: 1px solid #b6e0fe;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+
+.info_text {
+  font-size: 15px;
+  color: var(--text-color-blue-info-icon);
+}
+
+.discount_list {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  font-size: 14px;
+  color: var(--text-color-blue-info-icon);
+}
+
+.price_text {
+  font-weight: 600;
+  color: #d32f2f;
+  font-size: 16px;
+}
+
+.form_row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.form_row label {
+  min-width: 130px;
+  font-weight: 500;
+  color: var(--text-color-primary);
+}
+
+.end_date_info {
+  font-size: 14px;
+  color: var(--text-color-primary);
+  margin-left: 12px;
+}
+
+.week_days {
+  display: flex;
+  gap: 8px;
+}
+
+.week_day_btn {
+  min-width: 64px;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.start_date_picker {
+  width: 160px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+  color: var(--text-color-primary);
+}
+
+.time_select {
+  width: 160px;
+  height: 40px;
+
+  :global {
+    .ant-select-selector {
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .monthly_booking_container {
+    padding: 12px 4px;
+    gap: 12px;
+  }
+  .form_row label {
+    min-width: 80px;
+    font-size: 13px;
+  }
+  .week_day_btn {
+    min-width: 44px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,175 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.recharge_wrapper {
+    max-width: 600px;
+    min-width: 350px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px 32px 32px 32px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.balance_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.balance_amount {
+    color: var(--text-color-brand);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.recharge_form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form_group {
+    display: grid;
+    gap: 8px;
+
+    :global {
+        .ant-form-item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.required {
+    color: var(--text-color-red);
+}
+
+.input {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: var(--text-color-placeholder);
+    }
+}
+
+.recharge_btn {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.history_wrapper {
+    margin-top: 32px;
+}
+
+.history_title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-color-primary);
+}
+
+.history_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: #fafbfc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.history_table th,
+.history_table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.history_table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.history_table tr:last-child td {
+    border-bottom: none;
+}
+
+.status_success {
+    color: #388e3c;
+    background: #e8f5e9;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status_pending {
+    color: #f57f17;
+    background: #fff8e1;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.no_data {
+    text-align: center;
+    color: var(--text-color-secondary);
+    padding: 18px !important;
+}
+
+.pagination_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-bottom: 4px;
+
+    :global {
+        .ant-pagination {
+            display: flex;
+            gap: 4px;
+        }
+    }
+}
+
+.withdraw_form {
+    margin-top: 16px;
+    background: #fafbfc;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.withdraw_action_group {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.submit_btn {
+    width: 110px;
+}
+
+.action_group {
+    display: flex;
+    gap: 12px;
+}

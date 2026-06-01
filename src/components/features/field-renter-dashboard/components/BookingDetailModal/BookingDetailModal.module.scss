@@ -1,0 +1,33 @@
+.modal {
+    :global {
+        .ant-modal-content {
+            border-radius: 8px;
+        }
+    }
+}
+
+.detail_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: #fafbfc;
+    border-radius: 6px;
+    overflow: hidden;
+
+    th,
+    td {
+        padding: 10px 14px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    th {
+        background: #f5f5f5;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+}

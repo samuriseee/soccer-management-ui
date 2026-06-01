@@ -1,0 +1,202 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.booking_detail_modal {
+    :global {
+        .ant-modal-content {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .ant-modal-header {
+            margin-bottom: 16px;
+        }
+
+        .ant-modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-color-primary);
+        }
+    }
+}
+
+.booking_detail_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.booking_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.booking_id {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .label {
+        font-size: 14px;
+        color: var(--text-color-secondary);
+    }
+
+    .value {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-color-primary);
+    }
+}
+
+.booking_status {
+    .status_badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .status_confirmed {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .status_pending {
+        background-color: #fff8e1;
+        color: #f57f17;
+    }
+
+    .status_cancelled {
+        background-color: #ffebee;
+        color: #c62828;
+    }
+
+    .status_done {
+        background-color: #e3f2fd;
+        color: #1976d2;
+    }
+}
+
+.booking_sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.booking_section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.info_item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info_icon {
+    color: var(--text-color-secondary);
+    flex-shrink: 0;
+}
+
+.info_label {
+    font-size: 14px;
+    color: var(--text-color-secondary);
+    min-width: 100px;
+}
+
+.info_value {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.note_container {
+    display: flex;
+    gap: 8px;
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 4px;
+
+    .note_text {
+        font-size: 14px;
+        color: var(--text-color-primary);
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+.booking_actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.confirm_button,
+.cancel_button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+// .confirm_button {
+//     background-color: #4caf50;
+//     border-color: #4caf50;
+
+//     &:hover {
+//         background-color: #43a047;
+//         border-color: #43a047;
+//     }
+// }
+
+.cancel_button {
+    color: #f44336;
+    border-color: #f44336;
+
+    &:hover {
+        background-color: #ffebee;
+    }
+}
+
+@media (max-width: 576px) {
+    .info_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking_actions {
+        flex-direction: column;
+
+        button {
+            width: 100%;
+        }
+    }
+}

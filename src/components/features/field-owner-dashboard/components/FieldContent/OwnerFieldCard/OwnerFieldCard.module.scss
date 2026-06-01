@@ -1,0 +1,131 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.field_card {
+    background-color: var(--background-white-default);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+}
+
+.field_image {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :global {
+        .ant-image {
+            width: 100%;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+.type_badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    background-color: var(--background-light-blue-primary);
+    color: var(--text-color-brand);
+}
+
+.field_details {
+    padding: 16px;
+}
+
+.field_name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--text-color-primary);
+    margin: 0 0 12px 0;
+}
+
+.field_info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info_item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.info_label {
+    color: var(--text-color-secondary);
+}
+
+.info_value {
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.field_actions {
+    display: flex;
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+    gap: 8px;
+}
+
+.action_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+
+    &.edit {
+        background-color: var(--background-color-edit);
+        border: 1px solid var(--border-color-edit);
+        color: var(--text-color-edit);
+
+        &:hover {
+            background-color: var(--background-color-edit-hover);
+        }
+    }
+
+    &.delete {
+        background-color: var(--background-color-delete);
+        border: 1px solid var(--border-color-delete);
+        color: var(--text-color-delete);
+
+        &:hover {
+            background-color: var(--background-color-delete-hover);
+        }
+    }
+}

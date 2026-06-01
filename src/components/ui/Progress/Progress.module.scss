@@ -1,0 +1,32 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+.progress_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+
+    .progress_container {
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+
+        .progress_bar {
+            height: 100%;
+            border-radius: 4px;
+        }
+    }
+
+    .percentage_label {
+        min-width: 40px;
+        text-align: right;
+        font-size: var(--font-size-small);
+        color: var(--text-color-secondary);
+    }
+}

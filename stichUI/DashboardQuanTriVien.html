@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sportsync Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#005c64",
+                        "surface-container-high": "#e0e3e1",
+                        "tertiary-fixed": "#11eaff",
+                        "surface": "#f5f7f5",
+                        "primary": "#006b0a",
+                        "secondary-fixed": "#9df197",
+                        "surface-container-highest": "#d9dedb",
+                        "primary-fixed": "#59ee50",
+                        "secondary": "#176a21",
+                        "background": "#f5f7f5",
+                        "on-tertiary-fixed": "#003d43",
+                        "primary-container": "#59ee50",
+                        "on-secondary": "#d1ffc8",
+                        "on-primary": "#d2ffc4",
+                        "primary-dim": "#005d07",
+                        "surface-bright": "#f5f7f5",
+                        "on-primary-fixed-variant": "#005f07",
+                        "on-surface": "#2c2f2e",
+                        "on-error-container": "#520c00",
+                        "surface-tint": "#006b0a",
+                        "inverse-primary": "#59ee50",
+                        "error-dim": "#b92902",
+                        "primary-fixed-dim": "#49e043",
+                        "on-secondary-fixed-variant": "#12661e",
+                        "tertiary-container": "#11eaff",
+                        "on-primary-container": "#005406",
+                        "surface-dim": "#d1d5d3",
+                        "surface-container": "#e6e9e7",
+                        "secondary-container": "#9df197",
+                        "on-tertiary": "#d4f9ff",
+                        "on-tertiary-container": "#005159",
+                        "tertiary-fixed-dim": "#00dbee",
+                        "secondary-fixed-dim": "#90e28a",
+                        "on-secondary-container": "#005c15",
+                        "tertiary-dim": "#005861",
+                        "surface-container-low": "#eff1ef",
+                        "inverse-surface": "#0b0f0e",
+                        "outline": "#747776",
+                        "surface-variant": "#d9dedb",
+                        "on-surface-variant": "#595c5b",
+                        "error-container": "#f95630",
+                        "on-background": "#2c2f2e",
+                        "on-secondary-fixed": "#00460e",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#9b9d9c",
+                        "error": "#b02500",
+                        "secondary-dim": "#025d16",
+                        "on-error": "#ffefec",
+                        "on-primary-fixed": "#003e03",
+                        "tertiary": "#00656f",
+                        "outline-variant": "#abaeac"
+                    },
+                    fontFamily: {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-[#f5f7f5] dark:bg-slate-900 sticky top-0 border-r-0 font-['Be_Vietnam_Pro'] text-label-md uppercase tracking-wider">
+<div class="p-6 space-y-6 flex-1 flex flex-col">
+<!-- Branding & Admin Identity -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stadium</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-[#006b0a]">Admin Dashboard</h1>
+<p class="text-[10px] text-on-surface-variant font-medium">Sportsync Management</p>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex flex-col space-y-2 mt-8">
+<a class="bg-[#59ee50] text-[#006b0a] rounded-xl font-bold px-4 py-3 shadow-[0_4px_12px_rgba(89,238,80,0.2)] flex items-center gap-3 transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="stadium">stadium</span>
+<span>Quản lý sân</span>
+</a>
+<a class="text-[#2c2f2e] dark:text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-[#e0e3e1] dark:hover:bg-slate-800 rounded-xl transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span>Đơn đặt</span>
+</a>
+<a class="text-[#2c2f2e] dark:text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-[#e0e3e1] dark:hover:bg-slate-800 rounded-xl transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Thống kê</span>
+</a>
+<a class="text-[#2c2f2e] dark:text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-[#e0e3e1] dark:hover:bg-slate-800 rounded-xl transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span>Duyệt sân</span>
+</a>
+<a class="text-[#2c2f2e] dark:text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-[#e0e3e1] dark:hover:bg-slate-800 rounded-xl transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Giao dịch</span>
+</a>
+</nav>
+<!-- Admin Footer Profile -->
+<div class="mt-auto pt-6 border-t border-outline-variant/15 flex items-center gap-3">
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVLR6MzClJ6aqwPzlLohzecM3hg0MojAAg0G2k5qji_MprIarMSpjhhyr-l9GnfS6TlvrbnyxeutpOMix6OWkLU670azRM5-piXRZOiGcJu3anu3bLQ8oDyK6TaFATofMJ8wrWialJJG42Po828OG_y4H7rvctFvwuoEVKHtRINCh9wKrM5euXPpdoyq0Z01O4QFgL0Wgl-YlBq3CU9GH1E3FJwzH24OS0DJJWDcK5_p29FkRfYrF_-xiB0hm8pdgygBVeYuHzYRI"/>
+<div class="lowercase">
+<p class="text-sm font-bold text-on-surface normal-case">Admin Manager</p>
+<p class="text-[10px] text-on-surface-variant normal-case">admin@sportsync.com</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-4 md:p-8 overflow-y-auto">
+<!-- Header Summary Stats -->
+<header class="mb-10">
+<h2 class="text-3xl font-black text-on-surface tracking-tighter mb-6">Hệ thống Sportsync</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_12px_32px_rgba(0,107,10,0.03)] flex flex-col gap-1">
+<span class="text-label-md text-on-surface-variant font-medium tracking-widest uppercase">Tổng doanh thu</span>
+<span class="text-2xl font-bold text-primary tracking-tight">450.000.000đ</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_12px_32px_rgba(0,107,10,0.03)] flex flex-col gap-1">
+<span class="text-label-md text-on-surface-variant font-medium tracking-widest uppercase">Sân đang hoạt động</span>
+<span class="text-2xl font-bold text-on-surface tracking-tight">124 Sân</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_12px_32px_rgba(0,107,10,0.03)] flex flex-col gap-1">
+<span class="text-label-md text-on-surface-variant font-medium tracking-widest uppercase">Chờ duyệt sân</span>
+<span class="text-2xl font-bold text-secondary tracking-tight">12 Yêu cầu</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-[0_12px_32px_rgba(0,107,10,0.03)] flex flex-col gap-1">
+<span class="text-label-md text-on-surface-variant font-medium tracking-widest uppercase">Rút tiền chờ xử lý</span>
+<span class="text-2xl font-bold text-error tracking-tight">08 Yêu cầu</span>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- Section 1: Approve New Pitches -->
+<section class="xl:col-span-7 space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-on-surface">Phê duyệt sân mới</h3>
+<span class="px-3 py-1 bg-primary-container text-on-primary-container text-[10px] font-bold rounded-full uppercase tracking-tighter">Cần xử lý gấp</span>
+</div>
+<div class="space-y-4">
+<!-- Pitch Approval Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col sm:flex-row gap-6 items-center shadow-[0_12px_32px_rgba(0,107,10,0.03)] border-l-4 border-primary-container">
+<img alt="Cinematic football pitch" class="w-32 h-32 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEeB2Oidc7ZjRLvc6rRMHKKaO5JdAcTYkRsIh0WTkNT0_T2fdIe3F12zf5II5FwPztrvuMqhEaJ1iTIRCALHR97wzS-bISsyUP9Dtdr9btpga29srqnttdIqKJ6eb6aTVHoa0i3SEzNZrRU-l6F9gopwHzCwTNWEUXkrx7pmXsrH2ZUw1IdAcJGcdETJmqEpJRAgfyoT2alv_ALB6qLY7n3ZvRQUICQP5q6yA7Q9UkTx3uLFa99f9vfz7tuiWbUUZmrCmAYbjs7u8"/>
+<div class="flex-1 space-y-2">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-lg text-on-surface">Sân Bóng Mỹ Đa</h4><span class="ml-2 px-2 py-0.5 bg-blue-100 text-blue-700 text-[9px] font-bold rounded uppercase tracking-wider">Chủ sân</span>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase">Chờ duyệt</span>
+</div>
+<p class="text-sm text-on-surface-variant">Lô 12-14 Đường Mỹ Đa Tây 2, Ngũ Hành Sơn, Đà Nẵng</p>
+<div class="flex gap-2 text-[10px] text-on-surface-variant uppercase font-semibold">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">groups</span> 7 người</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">payments</span> 350k/h</span>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="px-4 py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-[11px] font-bold rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Xem chi tiết
+                                </button>
+<button class="px-4 py-2 bg-primary hover:bg-primary-dim text-white text-[11px] font-bold rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Phê duyệt
+                                </button>
+<button class="px-4 py-2 bg-error-container hover:bg-error text-white text-[11px] font-bold rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">cancel</span> Từ chối
+                                </button>
+</div>
+</div>
+</div>
+<!-- Pitch Approval Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col sm:flex-row gap-6 items-center shadow-[0_12px_32px_rgba(0,107,10,0.03)] border-l-4 border-primary-container">
+<img alt="Sunset stadium" class="w-32 h-32 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3UHv_zmbRjOEQNiopQPdTpOqQiNYeojFhCgJdoW8lp62zsRQiynyQaon42D5bQCTy3FUrvazLP0mc56X662HmRev0BEisYD1ILPZwdFBIewgNuYaWQ51j7ZXGwzDuvRMciRtcj1oYCSZUaVCIFYhFC3BVPkWaPMZcrP0ZYEjFZPuaVXc-aC1l67g90piXW6dlmfFrIcLBkGJccNFAKp1t3_QxgemjjlCrR8PoCBtCAv6D17xTjn56QFL4tzkqV4gFBRLHFUsPuc0"/>
+<div class="flex-1 space-y-2">
+<div class="flex items-center justify-between">
+<h4 class="font-bold text-lg text-on-surface">Pitches Arena Sơn Trà</h4><span class="ml-2 px-2 py-0.5 bg-blue-100 text-blue-700 text-[9px] font-bold rounded uppercase tracking-wider">Chủ sân</span>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] font-bold px-2 py-0.5 rounded uppercase">Chờ duyệt</span>
+</div>
+<p class="text-sm text-on-surface-variant">Trần Hưng Đạo, Quận Sơn Trà, Đà Nẵng</p>
+<div class="flex gap-2 text-[10px] text-on-surface-variant uppercase font-semibold">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">groups</span> 5 người</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">payments</span> 250k/h</span>
+</div>
+<div class="flex gap-3 pt-2">
+<button class="px-4 py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-[11px] font-bold rounded-lg transition-colors">Xem chi tiết</button>
+<button class="px-4 py-2 bg-primary hover:bg-primary-dim text-white text-[11px] font-bold rounded-lg transition-colors">Phê duyệt</button>
+<button class="px-4 py-2 bg-error-container hover:bg-error text-white text-[11px] font-bold rounded-lg transition-colors">Từ chối</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Withdrawal & Activity (Separated) -->
+<section class="xl:col-span-5 space-y-8">
+<!-- Tabbed Header for Separation -->
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-on-surface">Yêu cầu giao dịch</h3>
+</div>
+<!-- Chủ sân Section -->
+<div class="space-y-4">
+<div class="flex items-center gap-2 border-b-2 border-primary w-fit pb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">storefront</span>
+<h4 class="text-sm font-bold uppercase tracking-widest text-primary">Yêu cầu rút tiền (Chủ sân)</h4>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_12px_32px_rgba(0,107,10,0.03)] border-t-4 border-primary">
+<div class="divide-y divide-outline-variant/10">
+<!-- Withdrawal Row 1 (Owner) -->
+<div class="p-5 flex items-start justify-between hover:bg-surface transition-colors">
+<div class="flex gap-4">
+<img alt="User" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI3GOZO2a8zntFiI-0q_fEWD00_mU1FBvPaEyTvgji0LdHCKVVfNXAvYDjn2wy75gVTUcbli6BNFSZ2C0Fh3vT8kafnTv5mNLC70aVf1vGU0uoYAl1KTvhTLnFCFuOgA52jJW4u0Ytc43HMlSYLryC5evDGDIkhEK5kfvsLfKEvBWKWzoq7mzc4dFodRTlfpH7FWyGYVMbwKtTHa5xaVc_Rd7XmYEypF8Zrx7-xlQGWkg_ELOTdyz2S8B9YJNB2nGfJKtn4sKXz_k"/>
+<div class="space-y-1">
+<h5 class="font-bold text-sm text-on-surface">Nguyễn Thành Trung</h5>
+<p class="text-[10px] text-on-surface-variant font-medium">Vietcombank • ****4521</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-2">
+<span class="font-bold text-md text-primary">5.200.000đ</span>
+<button class="bg-primary text-white text-[9px] font-extrabold px-4 py-1.5 rounded-full hover:shadow-lg transition-all active:scale-95 uppercase tracking-tighter">
+                                        Duyệt lệnh
+                                    </button>
+</div>
+</div>
+<!-- Withdrawal Row 2 (Owner) -->
+<div class="p-5 flex items-start justify-between hover:bg-surface transition-colors">
+<div class="flex gap-4">
+<img alt="User" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr46Xn-Xr3Zwreru58gD5CjdmE9L-9MuQYzCVOULZU6TAl1Uaapvr9kDJ2PVYbeNXJJR7nLreC0NVnu9HssrlCo0bfPzgMYgmwtenmLzKtADa3KrUkvisePpEEXVZRHIp_QzrxYjKGG3ViIIrB4RbGHz2lp91GPg7TMuovscLzfxNsKCrEGy_bo1wVwAy1tKJaA9DglpSD-gHJ7wFCgmfz6OJCH7aiC7A6h5nbcj9BWKXC43HRRkW_BB8BnjCy4Luf17bcC-dXtcE"/>
+<div class="space-y-1">
+<h5 class="font-bold text-sm text-on-surface">Phạm Văn Nam</h5>
+<p class="text-[10px] text-on-surface-variant font-medium">MB Bank • ****1178</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-2">
+<span class="font-bold text-md text-primary">850.000đ</span>
+<button class="bg-primary text-white text-[9px] font-extrabold px-4 py-1.5 rounded-full hover:shadow-lg transition-all active:scale-95 uppercase tracking-tighter">
+                                        Duyệt lệnh
+                                    </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 text-center">
+<a class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors" href="#">Xem tất cả 12 yêu cầu</a>
+</div>
+</div>
+</div>
+<!-- Người thuê Section -->
+<div class="space-y-4">
+<div class="flex items-center gap-2 border-b-2 border-secondary w-fit pb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">person_check</span>
+<h4 class="text-sm font-bold uppercase tracking-widest text-secondary">Yêu cầu hoàn tiền (Người thuê)</h4>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_12px_32px_rgba(0,107,10,0.03)] border-t-4 border-secondary">
+<div class="divide-y divide-outline-variant/10">
+<!-- Withdrawal Row 1 (Renter) -->
+<div class="p-5 flex items-start justify-between hover:bg-surface transition-colors">
+<div class="flex gap-4">
+<img alt="User" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtnkQrzHgycvywU0yoqNDZ0YkwqLk_29LmoC-gkqhwOECTfEhSLezX_OQVf8kb_HaZyyVQRxtwgyEsICyhPXVT5Dlo5MWxpbON5c1EUrgEnJLx711zgy96Eu2561UZIV_JMKc2sG9DIcDtAAu3vHIu3zvCtJqWXWPGhnbgXAJgBACC9Sh55yh2T2NvUSq9rBzMhFmAtNrXWdCjbjwzCmFfLG_U3QOXsqxPkXj7p39G-1u-F7AqXzj9rzqxz9TNaBFaNeD8ur-Xxqs"/>
+<div class="space-y-1">
+<h5 class="font-bold text-sm text-on-surface">Lê Thị Mai Anh</h5>
+<p class="text-[10px] text-on-surface-variant font-medium">TPBank • ****9002</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-2">
+<span class="font-bold text-md text-primary">12.800.000đ</span>
+<button class="bg-secondary text-white text-[9px] font-extrabold px-4 py-1.5 rounded-full hover:shadow-lg transition-all active:scale-95 uppercase tracking-tighter">
+                                        Duyệt hoàn
+                                    </button>
+</div>
+</div>
+<!-- Static example for visual balance -->
+<div class="p-5 flex items-start justify-between hover:bg-surface transition-colors">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div class="space-y-1">
+<h5 class="font-bold text-sm text-on-surface">Trần Minh Quân</h5>
+<p class="text-[10px] text-on-surface-variant font-medium">Momo • 0912***456</p>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-2">
+<span class="font-bold text-md text-primary">350.000đ</span>
+<button class="bg-secondary text-white text-[9px] font-extrabold px-4 py-1.5 rounded-full hover:shadow-lg transition-all active:scale-95 uppercase tracking-tighter">
+                                        Duyệt hoàn
+                                    </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 text-center">
+<a class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest hover:text-secondary transition-colors" href="#">Xem tất cả 08 yêu cầu</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-[#e0e3e1] dark:bg-slate-950 full-width py-12 px-8 mt-auto font-['Be_Vietnam_Pro'] text-body-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-lg font-bold text-[#2c2f2e] dark:text-white block">Sportsync</span>
+<p class="text-[#2c2f2e] dark:text-slate-400 opacity-80">Nâng tầm trải nghiệm đặt sân bóng tại Đà Nẵng với công nghệ và sự tiện lợi tuyệt đối.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-[#006b0a] uppercase tracking-widest text-[10px]">Pháp lý</span>
+<a class="text-[#2c2f2e] dark:text-slate-400 hover:text-[#006b0a] transition-colors duration-200" href="#">Chính sách bảo mật</a>
+<a class="text-[#2c2f2e] dark:text-slate-400 hover:text-[#006b0a] transition-colors duration-200" href="#">Điều khoản sử dụng</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-[#006b0a] uppercase tracking-widest text-[10px]">Hỗ trợ</span>
+<p class="text-[#2c2f2e] dark:text-slate-400">Liên hệ: 09xx.xxx.xxx</p>
+<p class="text-[#2c2f2e] dark:text-slate-400">© 2024 Sportsync Da Nang. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

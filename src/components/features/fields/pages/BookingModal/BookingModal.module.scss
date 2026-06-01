@@ -1,0 +1,159 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modal_container {
+        background-color: white;
+        border-radius: 8px;
+        width: 95%;
+        max-height: 95vh;
+        overflow-y: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .modal_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--divider-color);
+
+            .modal_title {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+            }
+
+            .close_button {
+                cursor: pointer;
+                color: var(--text-color-secondary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px;
+                border-radius: 4px;
+            }
+
+            .close_button:hover {
+                background-color: var(--background-gray-hover);
+                color: var(--text-color-primary);
+            }
+        }
+
+        .info_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin: 16px 20px 16px 20px;
+
+            .alert_info {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+    
+                .balance_link {
+                    font-weight: 600;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    transition: color 0.15s;
+                }
+                
+                .balance_link:hover {
+                    text-decoration: underline;
+                    color: var(--text-color-red-warning);
+                    opacity: 0.8;
+                }
+            }
+
+            .toggle_booking_type_btn {
+                border-radius: 4px;
+                font-weight: 500;
+            }
+        }
+
+        .booking_container {
+            padding: 20px;
+            border-top: 2px solid #e0e0e0;
+
+            .date_navigator {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 16px;
+                gap: 12px;
+
+                .date_range {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: var(--text-color-primary);
+                    width: 205px;
+                    text-align: center;
+                }
+            }
+
+            .time_frame_container {
+                margin-bottom: 16px;
+                display: flex;
+                justify-content: space-between;
+                gap: 8px;
+
+                .time_frame_selector {
+                    display: flex;
+                    gap: 8px;
+
+                    .time_frame_button {
+                        border-radius: 4px;
+                        background-color: #f0f4f8;
+                        font-weight: 500;
+                        color: var(--text-color-primary);
+
+                        &.active {
+                            background-color: var(--background-color-brand);
+                            color: var(--text-color-default);
+                        }
+                    }
+                }
+
+                .book_button {
+                    border-radius: 4px;
+                    font-weight: 500;
+                }
+
+                @media (max-width: 768px) {
+                    .time_frame_selector {
+                        .time_frame_button {
+                            font-size: 14px;
+                            line-height: 20px;
+                            height: 28px;
+                        }
+                    }
+
+                    .book_button {
+                        font-size: 14px;
+                        line-height: 20px;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}

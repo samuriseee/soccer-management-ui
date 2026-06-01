@@ -1,0 +1,74 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-white-default);
+    padding: 0 16px;
+
+    .fields_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1240px;
+        width: 100%;
+        padding-bottom: 24px;
+
+        .fields_content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .fields_box_title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .field_count {
+                    font-size: var(--font-size-medium);
+                    color: var(--text-color-secondary);
+                    font-weight: var(--font-weight-normal);
+                    line-height: var(--line-hright-medium);
+
+                    .field_count_number {
+                        color: var(--text-color-primary);
+                        font-weight: var(--font-weight-semi-bold);
+                    }
+                }
+            }
+
+            .fields_list {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 24px;
+            }
+
+            @media (min-width: 640px) {
+                .fields_list {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .fields_list {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+
+    .clear_nearby_button {
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: var(--font-size-normal);
+    }
+}

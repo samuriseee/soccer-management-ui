@@ -1,0 +1,55 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.feature_card {
+    height: 295px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-m);
+    background-color: var(--background-white-default);
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+        transform: translateY(-5px);
+
+        .feature_icon {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+
+    .feature_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background-light-blue-circle);
+        color: var(--text-color-brand);
+        width: 100px;
+        height: 100px;
+        border-radius: var(--border-radius-circle);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .feature_rating {
+        color: var(--background-star-full);
+    }
+
+    .feature_title {
+        text-align: center;
+        font-size: var(--font-size-large);
+        font-weight: var(--font-weight-regular);
+        line-height: var(--line-height-large);
+        color: var(--text-color-secondary);
+    }
+}

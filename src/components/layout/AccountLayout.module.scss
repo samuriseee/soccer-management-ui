@@ -1,0 +1,58 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.account_section {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    // grid-template-columns: 2fr 3fr;
+    grid-template-columns: 50% 50%; 
+    background-color: var(--background-white-default);
+
+    .content_area {
+        padding: 32px;
+
+        .content_wrap {
+            display: flex;
+            justify-content: center;
+            height: 95%;
+        }
+    }
+
+    .right_banner {
+        flex: 1;
+
+        .banner_img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            transform: scale(0.9);
+            border-radius: var(--border-radius-s);
+        }
+    }
+
+    @media screen and (max-width: 996px) {
+        grid-template-columns: 1fr;
+        height: auto;
+
+        .content_area {
+            .content_wrap {
+                margin-top: 20px;
+                flex-direction: column;
+                justify-content: center;
+                height: auto;
+            }
+        }
+
+        .right_banner {
+            display: none;
+        }
+        
+    }
+}

@@ -1,0 +1,33 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+import { useCallback, useRef } from 'react'
+
+export function useDebounce<T extends (...args: any[]) => void>(
+    func: T,
+    wait: number
+): T {
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+    return useCallback(
+        (...args: Parameters<T>) => {
+            const later = () => {
+                timeoutRef.current = null
+                func(...args)
+            }
+
+            if (timeoutRef.current !== null) {
+                clearTimeout(timeoutRef.current)
+            }
+
+            timeoutRef.current = setTimeout(later, wait)
+        },
+        [func, wait] // Only re-create the debounced function if `func` or `wait` changes
+    ) as T
+}

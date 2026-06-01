@@ -1,0 +1,298 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.report_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.date_selector {
+    display: flex;
+    gap: 8px;
+}
+
+.date_range_select {
+    width: 140px;
+    height: 40px;
+
+    :global {
+        .ant-select-selector {
+            border-radius: 4px;
+        }
+    }
+}
+
+.year_select {
+    width: 120px;
+    height: 40px;
+
+    :global {
+        .ant-select-selector {
+            border-radius: 4px;
+        }
+    }
+}
+
+.download_button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #333333;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #f5f5f5;
+    }
+}
+
+.summary_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.summary_card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.card_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+.card_content {
+    flex: 1;
+}
+
+.card_title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+    margin: 0 0 8px 0;
+}
+
+.card_value {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 8px 0;
+}
+
+.card_change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #4caf50;
+    margin: 0;
+}
+
+.charts_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+.chart_card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chart_header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.chart_title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+}
+
+.chart {
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart_bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.chart_bar_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+
+.chart_bar {
+    width: 24px;
+    background-color: #4caf50;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #43a047;
+    }
+
+    &.booking_bar {
+        background-color: #2196f3;
+
+        &:hover {
+            background-color: #1e88e5;
+        }
+    }
+}
+
+.bar_value {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+    color: #757575;
+    white-space: nowrap;
+}
+
+.bar_label {
+    font-size: 12px;
+    color: #757575;
+    margin-top: 8px;
+}
+
+.usage_chart_container {
+    margin-top: 0;
+}
+
+.usage_chart {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.usage_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.usage_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usage_label {
+    font-size: 14px;
+    color: #333333;
+}
+
+.usage_value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.usage_bar_container {
+    width: 100%;
+    height: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.usage_bar {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .date_selector {
+        width: 100%;
+    }
+
+    .select {
+        flex: 1;
+    }
+
+    .download_button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .charts_container {
+        grid-template-columns: 1fr;
+    }
+}

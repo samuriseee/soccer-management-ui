@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sportsync - Đăng nhập &amp; Đăng ký</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#e6e9e7",
+              "inverse-surface": "#0b0f0e",
+              "error-dim": "#b92902",
+              "on-surface-variant": "#595c5b",
+              "primary-container": "#59ee50",
+              "on-tertiary": "#d4f9ff",
+              "tertiary-fixed-dim": "#00dbee",
+              "surface-dim": "#d1d5d3",
+              "secondary-dim": "#025d16",
+              "on-surface": "#2c2f2e",
+              "tertiary-container": "#11eaff",
+              "tertiary-dim": "#005861",
+              "surface-tint": "#006b0a",
+              "on-tertiary-fixed-variant": "#005c64",
+              "primary-fixed": "#59ee50",
+              "tertiary": "#00656f",
+              "primary-fixed-dim": "#49e043",
+              "on-primary": "#d2ffc4",
+              "secondary-fixed": "#9df197",
+              "on-tertiary-fixed": "#003d43",
+              "surface-variant": "#d9dedb",
+              "surface": "#f5f7f5",
+              "outline": "#747776",
+              "on-secondary-fixed": "#00460e",
+              "surface-container-high": "#e0e3e1",
+              "surface-bright": "#f5f7f5",
+              "error": "#b02500",
+              "secondary-container": "#9df197",
+              "outline-variant": "#abaeac",
+              "on-secondary-fixed-variant": "#12661e",
+              "surface-container-low": "#eff1ef",
+              "inverse-primary": "#59ee50",
+              "primary-dim": "#005d07",
+              "on-primary-fixed-variant": "#005f07",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#176a21",
+              "on-background": "#2c2f2e",
+              "primary": "#006b0a",
+              "on-primary-fixed": "#003e03",
+              "on-error": "#ffefec",
+              "inverse-on-surface": "#9b9d9c",
+              "secondary-fixed-dim": "#90e28a",
+              "surface-container-highest": "#d9dedb",
+              "error-container": "#f95630",
+              "on-secondary": "#d1ffc8",
+              "on-primary-container": "#005406",
+              "on-error-container": "#520c00",
+              "on-tertiary-container": "#005159",
+              "tertiary-fixed": "#11eaff",
+              "background": "#f5f7f5",
+              "on-secondary-container": "#005c15"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            color: #006b0a;
+            border-bottom: 2px solid #006b0a;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #006b0a 0%, #59ee50 100%);
+        }
+        .form-input-focus:focus {
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 107, 10, 0.08);
+            border-color: transparent;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface overflow-hidden">
+<main class="flex min-h-screen">
+<!-- Left Side: Visual Hero (Asymmetric Bleed) -->
+<section class="hidden lg:flex lg:w-1/2 relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="h-full w-full object-cover" data-alt="Cinematic wide shot of a vibrant green football pitch in Da Nang at sunrise, lush tropical mountains in the background with soft morning mist and golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMQm9ufuz_agUbhBrOJpQ17iDzXlvJOkIxqH_ztFq59RImD31X6Q0Xn5gVxVi0XfIJnz28cphJk727aSI5BfFRSpMc2DuSKdG0_Mi4EgK2UXy1JdiYXVfVwnF4Qwc_V_0iFnDmf9Za785CFX3KmVj9TGn0npOhgXDIDzVUSRYFDd59_KOrfAG223oHLD8q4ay96XcINRLe82jssG1iESDcfUJ8fyo6ixgwsRl7uVi0dCWpYyrCuzY3wn7a_7LnNMmAwZHhTsq4OXQ"/>
+</div>
+<!-- Editorial Overlay Content -->
+<div class="relative z-10 p-16 flex flex-col justify-between h-full bg-primary/20 backdrop-blur-[2px]">
+<div>
+<h1 class="text-surface-container-lowest font-black text-6xl tracking-tighter leading-none mb-4">
+                        Sportsync
+                    </h1>
+<p class="text-primary-container font-medium text-xl uppercase tracking-widest">
+                        Da Nang Editorial
+                    </p>
+</div>
+<div class="max-w-md">
+<h2 class="text-surface-container-lowest font-headline font-extrabold text-5xl leading-[1.1] mb-6">
+                        The Kinetic <br/>Pitch Experience.
+                    </h2>
+<p class="text-surface-container-lowest/90 text-lg leading-relaxed font-light">
+                        Kết nối cộng đồng yêu bóng đá tại Đà Nẵng qua những sân chơi tiêu chuẩn chuyên nghiệp. Trải nghiệm tốc độ, đam mê và sự gắn kết.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 bg-surface-container-lowest/10 backdrop-blur-md px-4 py-2 rounded-xl text-surface-container-lowest border border-surface-container-lowest/20">
+<span class="material-symbols-outlined text-primary-container">stadium</span>
+<span class="text-sm font-medium">50+ Sân bóng</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest/10 backdrop-blur-md px-4 py-2 rounded-xl text-surface-container-lowest border border-surface-container-lowest/20">
+<span class="material-symbols-outlined text-primary-container">groups</span>
+<span class="text-sm font-medium">10k+ Thành viên</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Side: Authentication Shell -->
+<section class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-surface-container-lowest">
+<div class="w-full max-w-[480px]">
+<!-- Brand Mobile Logo -->
+<div class="lg:hidden mb-8">
+<h1 class="text-primary font-black text-3xl tracking-tighter">Sportsync</h1>
+</div>
+<!-- Tabs -->
+<div class="flex gap-8 mb-10 border-b border-surface-variant/30">
+<a class="pb-3 text-lg font-bold active-tab transition-all inline-block" href="{{DATA:SCREEN:SCREEN_9}}">Đăng nhập</a>
+<button class="pb-3 text-lg font-medium text-on-surface-variant hover:text-primary transition-all">Tạo tài khoản</button>
+</div>
+<!-- Role Selection Chips -->
+<div class="mb-8">
+<label class="block text-label-md uppercase tracking-wider font-bold mb-4 text-on-surface-variant">Tôi là:</label>
+<div class="flex gap-3">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl border-2 border-primary bg-primary/5 text-primary font-bold transition-all">
+<span class="material-symbols-outlined">person</span>
+                            Người thuê sân
+                        </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl border-2 border-surface-container-high text-on-surface-variant font-medium hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined">storefront</span>
+                            Chủ sân
+                        </button>
+</div>
+</div>
+<!-- Form Fields -->
+<form class="space-y-5">
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 md:col-span-1">
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Họ và tên</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 form-input-focus transition-all text-on-surface placeholder:text-outline-variant" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Số điện thoại</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 form-input-focus transition-all text-on-surface placeholder:text-outline-variant" placeholder="0905 XXX XXX" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 form-input-focus transition-all text-on-surface placeholder:text-outline-variant" placeholder="example@sportsync.vn" type="email"/>
+</div>
+<div class="relative">
+<label class="block text-sm font-semibold mb-2 text-on-surface-variant">Mật khẩu</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-4 form-input-focus transition-all text-on-surface placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-[46px] text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 rounded-sm border-surface-variant text-primary focus:ring-primary h-4 w-4" id="terms" type="checkbox"/>
+<label class="text-sm text-on-surface-variant leading-relaxed" for="terms">
+                            Tôi đồng ý với <a class="text-primary font-bold hover:underline" href="#">Điều khoản dịch vụ</a> và <a class="text-primary font-bold hover:underline" href="#">Chính sách bảo mật</a> của Sportsync.
+                        </label>
+</div>
+<!-- Main CTA -->
+<a class="w-full kinetic-gradient text-on-primary-container font-extrabold text-lg py-4 rounded-xl shadow-[0_12px_32px_rgba(0,107,10,0.15)] hover:scale-[1.02] active:scale-95 transition-all text-center block" href="{{DATA:SCREEN:SCREEN_9}}">Tham gia ngay</a>
+</form>
+<!-- Divider -->
+<!-- Social Logins -->
+<!-- Footer Text -->
+<p class="mt-10 text-center text-sm text-on-surface-variant font-medium mt-12">
+                    Đã có tài khoản? <a class="text-primary font-bold hover:underline" href="{{DATA:SCREEN:SCREEN_9}}">Đăng nhập</a>
+</p>
+</div>
+</section>
+</main>
+</body></html>

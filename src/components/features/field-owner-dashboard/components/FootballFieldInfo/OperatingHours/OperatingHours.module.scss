@@ -1,0 +1,119 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+.operating_hours {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+.time_container {
+    display: flex;
+    gap: 12px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.time_group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.time_label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.required {
+    color: var(--text-color-red);
+}
+
+.time_input_container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.time_icon {
+    color: var(--text-color-secondary);
+}
+
+.time_select {
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+    
+    :global {
+        .ant-select-selector { 
+            border-radius: 4px;
+        }
+    }
+}
+
+.time_info {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.time_info_title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+    margin-bottom: 12px;
+}
+
+.time_info_list {
+    padding-left: 20px;
+    margin: 0;
+
+    li {
+        font-size: 14px;
+        color: var(--text-color-secondary);
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section_title {
+        font-size: 16px;
+    }
+
+    .time_label {
+        font-size: 13px;
+    }
+
+    .time_select {
+        font-size: 13px;
+    }
+
+    .time_info_title {
+        font-size: 15px;
+    }
+
+    .time_info_list li {
+        font-size: 13px;
+    }
+}

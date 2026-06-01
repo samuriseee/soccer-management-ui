@@ -1,0 +1,41 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.star_filled,
+.star_empty,
+.star_half_filled {
+    color: var(--background-star-full);
+}
+
+.half_star_container {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+
+.half_star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.star_empty {
+    color: var(--border-star-empty);
+}
+
+.half_star_empty {
+    color: var(--border-star-empty);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

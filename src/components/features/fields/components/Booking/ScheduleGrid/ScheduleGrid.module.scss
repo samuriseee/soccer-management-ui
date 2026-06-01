@@ -1,0 +1,198 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+/* New layout with fixed day column and scrollable time slots */
+.schedule_container {
+    display: flex;
+    border: 1px solid var(--border-color-default);
+    border-radius: 8px;
+    overflow: hidden;
+
+    .day_info_column {
+        min-width: 80px;
+        flex-shrink: 0;
+        border-right: 1px solid var(--border-color-default);
+        background-color: #f9fafb;
+
+        .day_info_header {
+            height: 45px;
+            border-bottom: 1px solid var(--border-color-default);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .day_info_cell {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--text-color-secondary);
+            }
+        }
+
+        .day_info_body {
+            display: flex;
+            flex-direction: column;
+
+            .day_info {
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid var(--border-color-default);
+
+                @media (max-width: 768px) {
+                    height: 50px;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .day_name {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: var(--text-color-primary);
+                }
+
+                .day_number {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: var(--text-color-secondary);
+                }
+            }
+        }
+    }
+
+    .time_slots_column {
+        flex-grow: 1;
+        overflow-x: auto;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e1 #f1f5f9;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+
+        .time_slots_header {
+            display: flex;
+            background-color: #f9fafb;
+            border-bottom: 1px solid var(--border-color-default);
+            min-width: max-content;
+
+            .time_slot_header {
+                padding: 12px 8px;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                border-right: 1px solid var(--border-color-default);
+                min-width: 120px;
+                flex: 1;
+                color: var(--text-color-primary);
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+
+        .time_slots_body {
+            display: flex;
+            flex-direction: column;
+            min-width: max-content;
+
+            .day_slots {
+                display: flex;
+                border-bottom: 1px solid var(--border-color-default);
+                height: 60px;
+
+                @media (max-width: 768px) {
+                    height: 50px;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .time_slot {
+                    padding: 16px 8px;
+                    text-align: center;
+                    border-right: 1px solid var(--border-color-default);
+                    cursor: pointer;
+                    transition: background-color 0.2s;
+                    min-width: 120px;
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @media (max-width: 768px) {
+                        padding: 8px;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    &.available {
+                        background-color: var(--background-light-blue-primary);
+                    }
+
+                    &.available:hover {
+                        background-color: var(--background-light-blue-hover);
+                    }
+
+                    &.selected {
+                        background-color: var(--background-light-blue-selected);
+                    }
+
+                    &.booked {
+                        background-color: #fee2e2;
+                        cursor: not-allowed;
+                    }
+
+                    &.expired {
+                        background-color: #f3f4f6;
+                        cursor: not-allowed;
+                    }
+
+                    .price {
+                        font-weight: 500;
+                        line-height: 20px;
+                        color: var(--text-color-brand);
+                    }
+
+                    .expired_text {
+                        color: var(--text-color-secondary);
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    .booked_text {
+                        color: var(--text-color-red);
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

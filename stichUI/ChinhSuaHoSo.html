@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chỉnh sửa hồ sơ - Lush Pitch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#e0e3e1",
+              "secondary": "#176a21",
+              "outline-variant": "#abaeac",
+              "primary-fixed-dim": "#49e043",
+              "surface-container-highest": "#d9dedb",
+              "surface-tint": "#006b0a",
+              "surface-variant": "#d9dedb",
+              "on-surface": "#2c2f2e",
+              "on-primary": "#d2ffc4",
+              "outline": "#747776",
+              "on-tertiary": "#d4f9ff",
+              "tertiary-container": "#11eaff",
+              "surface": "#f5f7f5",
+              "on-secondary": "#d1ffc8",
+              "surface-bright": "#f5f7f5",
+              "primary-container": "#59ee50",
+              "surface-container-low": "#eff1ef",
+              "tertiary-fixed": "#11eaff",
+              "primary-fixed": "#59ee50",
+              "secondary-fixed": "#9df197",
+              "on-primary-fixed-variant": "#005f07",
+              "on-secondary-container": "#005c15",
+              "on-surface-variant": "#595c5b",
+              "on-primary-fixed": "#003e03",
+              "inverse-surface": "#0b0f0e",
+              "secondary-fixed-dim": "#90e28a",
+              "tertiary-dim": "#005861",
+              "secondary-container": "#9df197",
+              "error-dim": "#b92902",
+              "secondary-dim": "#025d16",
+              "on-tertiary-fixed-variant": "#005c64",
+              "on-primary-container": "#005406",
+              "on-error": "#ffefec",
+              "error": "#b02500",
+              "tertiary": "#00656f",
+              "surface-dim": "#d1d5d3",
+              "inverse-on-surface": "#9b9d9c",
+              "on-secondary-fixed-variant": "#12661e",
+              "primary-dim": "#005d07",
+              "background": "#f5f7f5",
+              "on-tertiary-fixed": "#003d43",
+              "on-error-container": "#520c00",
+              "on-tertiary-container": "#005159",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#00460e",
+              "tertiary-fixed-dim": "#00dbee",
+              "error-container": "#f95630",
+              "primary": "#006b0a",
+              "surface-container": "#e6e9e7",
+              "inverse-primary": "#59ee50",
+              "on-background": "#2c2f2e"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 h-20 bg-surface/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,107,10,0.06)] z-50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-primary tracking-tighter uppercase">Lush Pitch</span>
+<div class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">Sân bóng</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">Lịch đặt</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#">Ưu đãi</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">notifications</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a young man with a friendly expression against a clean soft studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQTzI69A30KbneA8UN-PAuNw57M-2WFjgQOml_rxBf8_sb4fe8x4aH5vM77_vnqo6oq2lJRaHmoMlpgr0gxpaQcNDPIwBGaYa-X4hTaz5R2kzqFrwb8pQidBSwmYn8nDX4Ic6blMlFJ2SnrvWIUbHrWXBLhqNUsXGfV0TdKoDf44ufChmhC_IXpazwV3LZYZ0PlLGWdSjvaVZqsBOi4FjAp5wY1G8jaUPPNqVgqlMMmJmN9_6alVha6bsqRfyXleUH9FRWQtwTEek"/>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-28 pb-20 px-4 min-h-screen">
+<div class="max-w-3xl mx-auto">
+<!-- Breadcrumbs/Back -->
+<div class="mb-8 flex items-center gap-2">
+<button class="flex items-center text-primary font-bold hover:gap-1 transition-all group">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+<span>Quay lại</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-[2rem] p-8 md:p-12 shadow-[0_12px_32px_rgba(0,107,10,0.04)]">
+<div class="mb-12">
+<h1 class="text-[3rem] font-black tracking-tight leading-none text-on-surface mb-2">Chỉnh sửa hồ sơ</h1>
+<p class="text-on-surface-variant body-lg">Cập nhật thông tin cá nhân và sở thích thể thao của bạn tại Đà Nẵng.</p>
+</div>
+<!-- Profile Header: Avatar Upload -->
+<div class="flex flex-col items-center justify-center mb-16 relative">
+<div class="relative group">
+<div class="w-40 h-40 rounded-full ring-4 ring-primary-container p-1 overflow-hidden">
+<img alt="Profile large" class="w-full h-full object-cover rounded-full" data-alt="Detailed portrait of a man smiling warmly, high quality photography with soft natural lighting and shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAROwyiaC8biZGm6GUYng3quXX06ye4-IibbzyY2amiunWenQStPr2xV2ZtwRjR21P_hqyCbxJjlEzGeYAarUhPnZfGdpKqXfXHleHsjmj0X_XJzsI-p_2zNkSt0Qa0fOQZSbA0J7kg75TpvjCs-JrC9GTeemvzpt-uMmq5uSAZ2huOwF_WQQ4MVcgaKm15eUoOge1UhIDzYCLhpQ0SJeABoJ1I5McRYagTH_Rtj6htwaVFifERLAsA9MBjMKJmYWqLfW8jicves80"/>
+</div>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit</span>
+</button>
+</div>
+</div>
+<form class="space-y-12">
+<!-- Section 1: Personal Details -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-8 bg-primary-container rounded-full"></div>
+<h2 class="text-xl font-bold tracking-tight uppercase label-md text-on-surface">Thông tin cá nhân</h2>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant px-1">Họ và tên</label>
+<input class="w-full px-6 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container text-on-surface font-medium transition-all" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant px-1">Tiểu sử</label>
+<textarea class="w-full px-6 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container text-on-surface font-medium transition-all resize-none" placeholder="Chia sẻ một chút về niềm đam mê bóng đá của bạn..." rows="3"></textarea>
+</div>
+</div>
+</section>
+<!-- Section 2: Contact Information -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-8 bg-primary-container rounded-full"></div>
+<h2 class="text-xl font-bold tracking-tight uppercase label-md text-on-surface">Thông tin liên hệ</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant px-1">Địa chỉ Email</label>
+<div class="relative">
+<input class="w-full px-6 py-4 rounded-xl bg-surface-container-high border-none text-on-surface-variant font-medium cursor-not-allowed opacity-75" disabled="" type="email" value="nguyenvana@gmail.com"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">lock</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant px-1">Số điện thoại</label>
+<input class="w-full px-6 py-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary-container text-on-surface font-medium transition-all" placeholder="0905 XXX XXX" type="tel"/>
+</div>
+</div>
+</section>
+<!-- Section 3: Sports Preferences -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-8 bg-primary-container rounded-full"></div>
+<h2 class="text-xl font-bold tracking-tight uppercase label-md text-on-surface">Sở thích thể thao</h2>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 px-1">Chọn những môn thể thao bạn quan tâm để nhận gợi ý sân tốt nhất.</p>
+<div class="flex flex-wrap gap-3">
+<!-- Selected Sport -->
+<label class="cursor-pointer group">
+<input checked="" class="hidden peer" type="checkbox"/>
+<div class="px-6 py-3 rounded-full bg-primary text-on-primary font-bold flex items-center gap-2 transition-all peer-checked:bg-primary peer-checked:text-on-primary bg-surface-container-high text-on-surface-variant peer-not-checked:bg-surface-container-high peer-not-checked:text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">sports_soccer</span>
+                                    Football
+                                </div>
+</label>
+<!-- Available Sports -->
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-bold flex items-center gap-2 transition-all peer-checked:bg-primary peer-checked:text-on-primary">
+<span class="material-symbols-outlined text-lg">badminton</span>
+                                    Badminton
+                                </div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-bold flex items-center gap-2 transition-all peer-checked:bg-primary peer-checked:text-on-primary">
+<span class="material-symbols-outlined text-lg">sports_tennis</span>
+                                    Tennis
+                                </div>
+</label>
+<label class="cursor-pointer group">
+<input class="hidden peer" type="checkbox"/>
+<div class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-bold flex items-center gap-2 transition-all peer-checked:bg-primary peer-checked:text-on-primary">
+<span class="material-symbols-outlined text-lg">sports_basketball</span>
+                                    Basketball
+                                </div>
+</label>
+</div>
+</section>
+<!-- CTA Actions -->
+<div class="pt-8 flex flex-col md:flex-row gap-4">
+<button class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-black text-lg py-5 rounded-2xl shadow-[0_12px_32px_rgba(0,107,10,0.2)] hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                            Lưu thay đổi
+                        </button>
+<button class="px-10 py-5 rounded-2xl text-primary font-bold hover:bg-surface-container-low transition-all" type="button">
+                            Hủy bỏ
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-surface-container-lowest/90 dark:bg-stone-950/90 backdrop-blur-lg shadow-[0_-8px_24px_rgba(0,107,10,0.04)] rounded-t-[1.5rem]">
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:bg-surface-container-high rounded-2xl transition-all">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold tracking-widest uppercase">Khám phá</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:bg-surface-container-high rounded-2xl transition-all">
+<span class="material-symbols-outlined">sports_soccer</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold tracking-widest uppercase">Sân của tôi</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:bg-surface-container-high rounded-2xl transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold tracking-widest uppercase">Thông báo</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-5 py-2 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold tracking-widest uppercase">Hồ sơ</span>
+</div>
+</nav>
+</body></html>

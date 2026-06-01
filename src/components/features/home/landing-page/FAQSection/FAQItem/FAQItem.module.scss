@@ -1,0 +1,52 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.faq_item {
+    border-bottom: 1px solid var(--divider-color);
+
+    &:first-child {
+        border-top: 1px solid var(--divider-color);
+    }
+
+    .faq_question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        padding: 1.25rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--text-color-brand);
+        }
+
+        .icon {
+            transition: transform 0.2s ease;
+        }
+    }
+
+    .faq_answer {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+
+        &.faq_answer_open {
+            height: auto;
+        }
+
+        .faq_answer_content {
+            padding-bottom: 1.25rem;
+            color: var(--text-color-secondary);
+        }
+    }
+}
+

@@ -1,0 +1,19 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 34px;
+    gap: 8px;
+    .input_number {
+        margin-inline: 0 !important;
+        width: 68px;
+    }
+}

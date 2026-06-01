@@ -1,0 +1,84 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+.basic_infor_mation {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    :global {
+        .ant-form-item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form_label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.required {
+    color: var(--text-color-red);
+}
+
+.form_input {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &::placeholder {
+        color: var(--text-color-placeholder);
+    }
+}
+
+.form_textarea {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &::placeholder {
+        color: var(--text-color-placeholder);
+    }
+}
+
+.helper_text {
+    font-size: 12px;
+    color: var(--text-color-secondary);
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .section_title {
+        font-size: 16px;
+    }
+
+    .form_label {
+        font-size: 13px;
+    }
+
+    .form_input,
+    .form_textarea {
+        font-size: 13px;
+    }
+}

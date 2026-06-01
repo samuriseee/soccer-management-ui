@@ -1,0 +1,109 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.sign_up_outer_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+
+    @media screen and (max-width: 768px) {
+        .sign_up_container {
+            width: 100%;
+        }
+
+        .sign_up_wrap_form .input {
+            width: 100% !important;
+        }
+    }
+
+    .sign_up_container {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        // height: 100%;
+        max-width: 100%;
+
+        .sign_up_wrap {
+            &_top {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .title {
+                    color: var(--text-color-primary);
+                    font-weight: var(--font-weight-semi-bold);
+                    font-size: var(--font-size-extra-large);
+                    line-height: var(--line-height-very-large);
+                    letter-spacing: -0.03em;
+                }
+
+                .google_login_container {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .divider {
+                    display: flex;
+                    align-items: center;
+                    color: var(--text-color-secondary);
+                    font-size: var(--font-size-medium);
+                    font-weight: var(--font-weight-regular);
+                    line-height: var(--line-height-medium);
+
+                    hr {
+                        flex: 1;
+                        border-top: 1px solid var(--divider-color-gray);
+                    }
+
+                    span {
+                        margin: 0px 10px;
+                    }
+                }
+            }
+
+            &_form {
+                margin-top: 20px;
+
+                .input {
+                    max-width: 100%;
+                    width: 500px;
+                }
+
+                // .spin_loading {
+                //     display: flex;
+                //     justify-content: center;
+                //     padding-bottom: 1.5rem;
+                // }
+            }
+        }
+
+        .login_option {
+            display: flex;
+            justify-content: end;
+
+            p {
+                color: var(--text-color-secondary);
+                font-size: var(--font-size-medium);
+                font-weight: var(--font-weight-regular);
+                line-height: var(--line-height-medium);
+            }
+
+            .login_link {
+                color: var(--text-color-hyperlink-auth);
+                font-weight: var(--font-weight-medium);
+
+                &:hover {
+                    opacity: 0.7;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

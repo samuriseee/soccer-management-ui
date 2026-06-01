@@ -1,0 +1,31 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.cropper_wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+    :global {
+        .reactEasyCrop_CropArea {
+            &::before {
+                border: none;
+            }
+
+            &::after {
+                border: none;
+            }
+        }
+    }
+}

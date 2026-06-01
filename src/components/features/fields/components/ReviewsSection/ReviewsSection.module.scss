@@ -1,0 +1,92 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.reviews_section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .section_title {
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-semi-bold);
+        color: var(--text-color-primary);
+        line-height: 24px;
+        display: flex;
+        gap: 4px;
+        
+        p {
+            color: var(--text-color-secondary);
+            font-weight: 400;
+        }
+    }
+
+    .reviews_container {
+        display: flex;
+        flex-direction: column;
+
+        .review_form {
+            margin: 16px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h3 {
+                font-size: var(--font-size-medium);
+                font-weight: var(--font-weight-bold);
+                line-height: 24px;
+            }
+
+            .stars {
+                display: flex;
+                gap: 8px;
+
+                .star {
+                    cursor: pointer;
+                }
+            }
+
+            textarea {
+                height: 100px;
+                padding: 8px;
+                border-radius: var(--border-radius-xs);
+                font-size: var(--font-size-small);
+            }
+        }
+
+        .reviews_list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            // margin-top: 24px;
+
+            .review_item {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+                padding: 20px 18px 16px 18px;
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+        .pagination_wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            :global {
+                .ant-pagination {
+                    display: flex;
+                    gap: 4px;
+                }
+            }
+        }
+    }
+}

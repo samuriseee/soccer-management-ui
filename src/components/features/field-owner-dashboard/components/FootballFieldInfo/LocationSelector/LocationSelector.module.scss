@@ -1,0 +1,111 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.location_selector {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    :global {
+        .ant-form-item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form_label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.required {
+    color: var(--text-color-red);
+}
+
+.form_input {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &::placeholder {
+        color: var(--text-color-placeholder);
+    }
+}
+
+.form_select {
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+
+    :global {
+        .ant-select-selector {
+            border-radius: 4px;
+        }
+    }
+}
+
+.helper_text {
+    font-size: 12px;
+    color: var(--text-color-secondary);
+    margin-top: 4px;
+}
+
+.location_info {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.location_title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.location_address {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-color-primary);
+}
+
+@media (max-width: 768px) {
+    .section_title {
+        font-size: 16px;
+    }
+
+    .form_label {
+        font-size: 13px;
+    }
+
+    .form_input {
+        font-size: 13px;
+    }
+
+    .form_select {
+        font-size: 13px;
+    }
+}

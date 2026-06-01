@@ -1,0 +1,23 @@
+/*
+ * # -*- coding: utf-8 -*-
+ * # Copyright (C) 2025 NH11
+ * #
+ * # All rights reserved.
+ * # @link
+ * #
+ */
+
+.rating_bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .stars {
+        display: flex;
+        // min-width: 100px;
+
+        .star_icon {
+            margin-right: 2px;
+        }
+    }
+}
